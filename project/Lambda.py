@@ -4,8 +4,11 @@ import sagemaker
 from sagemaker.predictor import Predictor
 from sagemaker.serializers import IdentitySerializer
 
+import boto3
+import base64
+
 # Specify your deployed endpoint name here
-ENDPOINT = "image-classification-2024-08-31-17-11-24-937" #"your-endpoint-name"
+ENDPOINT =  #"your-endpoint-name"
 
 def lambda_handler(event, context):
     
@@ -37,8 +40,7 @@ def lambda_handler(event, context):
 
 
 
-import boto3
-import base64
+
 
 s3 = boto3.client('s3')
 
